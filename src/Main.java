@@ -6,6 +6,12 @@ public class Main {
         Task1();
         Task2();
         Task3();
+        Task4();
+        Task5();
+        Task6();
+        Task7();
+        Task8();
+
 
     }
 
@@ -27,6 +33,7 @@ public class Main {
         System.out.print(Arrays.toString(newMassiv));
 
     }
+
     public static void Task2() {
         System.out.println("");
         System.out.println("Задача 2");
@@ -61,6 +68,64 @@ public class Main {
             System.out.print(newMassiv6[i] + ", ");
             if (i == newMassiv6.length) ;
             System.out.print(newMassiv6[i]);
+        }
+    }
+
+    public static void Task4() {
+        System.out.println("");
+        System.out.println("Задача 4");
+        int[] newMassiv7 = {1, 2, 3};
+        for (int i = 0; i < newMassiv7.length; i++) {
+            if (newMassiv7[i] % 2 != 0)
+                System.out.println(newMassiv7[i] + 1);
+        }
+    }
+
+    public static void Task5() {
+        System.out.println("Задача 5");
+        int[] arr = generateRandomArray();
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > sum)
+                sum += arr[i];
+        }
+        System.out.println("Сумма трат за месяц составила: " + sum);
+    }
+
+    public static void Task6() {
+        System.out.println("Задача 6");
+        int[] arr = generateRandomArray();
+        int maxSum = arr[0];
+        int minSum = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > maxSum) {
+                maxSum = arr[i];
+            }
+            if (arr[i] < minSum) {
+                minSum = arr[i];
+            }
+        }
+        System.out.println("Минимальная сумма трат за день составила " + minSum + " рублей. " + "Максимальная сумма трат за день составила: " + maxSum + " рублей.");
+    }
+
+    public static void Task7() {
+        System.out.println("Задача 7");
+        int[] arr = generateRandomArray();
+        int sum = 0;
+        int daysInMonth = 30;
+        for (int index = 0; index < arr.length; index++) {
+            sum = sum + arr[index];
+        }
+        int averageAmount = sum / daysInMonth;
+        System.out.println("Средняя сумма трат за месяц составила " + averageAmount);
+
+    }
+
+    public static void Task8() {
+        System.out.println("Задача 8");
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
         }
     }
 }
